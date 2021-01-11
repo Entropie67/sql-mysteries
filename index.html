@@ -105,9 +105,9 @@
 
     <header class="header-product">
         <h1 class="product-logo product-logo-large">
-            SQL Murder Mystery
+            SQL Meurtre mystérieux.
         </h1>
-        <h2 class="product-tagline">Can you find out whodunnit?</h2>
+        <h2 class="product-tagline">Peux-tu trouver le coupable ?</h2>
     </header>
 
     <div class="container">
@@ -116,41 +116,38 @@
             <div class="grid-item">
                 <img src="174092-clue-illustration.png" class="img-rounded" alt="A decorative illustration of a detective looking at an evidence board.">
                 <p>
-                    There's been a Murder in SQL City! The SQL Murder Mystery is designed to be both a self-directed lesson to learn SQL concepts and commands and a fun game for experienced SQL users to solve an intriguing crime.
-                </p>
+                    Il y a eu un meurtre à SQL City ! Le mystère du meurtre SQL est conçu pour être à la fois une leçon autodirigée pour apprendre les concepts et les commandes SQL et un jeu amusant pour les utilisateurs SQL expérimentés pour résoudre un crime intrigant.</p>
             </div>
         </div>
 
         <div class="grid">
             <div class="grid-item">
-                <h2>New to SQL?</h2>
+                <h2>Vous débutez en SQL ?</h2>
                 <p>
-                    This exercise is meant more as a way to practice SQL skills than a full tutorial. If you've never used SQL at all, <a href="walkthrough.html">try the walkthrough</a>. If you really want to learn a lot about SQL, you may prefer a complete
-                    tutorial like <a href="https://selectstarsql.com/">Select Star SQL.</a>
+                    Cet exercice se veut plus un moyen de mettre en pratique les compétences SQL qu'un didacticiel complet. Si vous n'avez jamais utilisé du tout SQL <a href="walkthrough.html">try the walkthrough</a>. Si vous voulez vraiment en savoir beaucoup sur SQL, vous préférerez peut-être un tutoriel complet comme <a href="https://selectstarsql.com/">Select Star SQL.</a>
 
                 </p>
-                <p>If you're comfortable with SQL, you can <a href="#experienced">dive in below</a>!</p>
+                <p>Si vous êtes à l'aise avec SQL, vous pouvez <a href="#experienced">plonger ci-dessous</a>!</p>
             </div>
         </div>
 
 
         <div class="grid">
             <div class="grid-item">
-                <h2 id="experienced">Experienced SQL sleuths start here</h2>
+                <h2 id="experienced">Les détectives SQL expérimentés commencent ici</h2>
                 <p>
-                    A crime has taken place and the detective needs your help. The detective gave you the crime scene report, but you somehow lost it. You vaguely remember that the crime was a <strong>​murder​</strong> that occurred sometime on ​<strong>Jan.15, 2018​</strong>                    and that it took place in ​<strong>SQL City​</strong>. Start by retrieving the corresponding crime scene report from the police department’s database.
+                    Un crime a eu lieu et le détective a besoin de votre aide. Le détective vous a donné le rapport sur la scène du crime, mais vous l'avez perdu. Vous vous souvenez vaguement que le crime était un assassiner qui a eu lieu quelque temps sur Jan.15 2018 et qu'il a eu lieu dans SQL ville . Commencez par récupérer le rapport de scène de crime correspondant dans la base de données du service de police.</p>
+
+                <h3>Explorer la structure de la base de données</h3>
+
+                <p>
+                    Les utilisateurs SQL expérimentés peuvent souvent utiliser des requêtes de base de données pour déduire la structure d'une base de données. Mais chaque système de base de données a différentes manières de gérer ces informations. Le mystère du meurtre SQL est construit à l'aide de SQLite. Utilisez cette commande SQL pour rechercher les tables dans la base de données Murder Mystery.
                 </p>
 
-                <h3>Exploring the Database Structure</h3>
-
-                <p>
-                    Experienced SQL users can often use database queries to infer the structure of a database. But each database system has different ways of managing this information. The SQL Murder Mystery is built using SQLite. Use this SQL command to find the tables
-                    in the Murder Mystery database.
-                </p>
-
-                <sql-exercise data-question="Run this query to find the names of the tables in this database." data-comment="This command is specific to SQLite. For other databases, you'll have to learn their specific syntax." data-default-text="SELECT name 
-  FROM sqlite_master
- where type = 'table'"></sql-exercise>
+                <sql-exercise data-question="Exécutez cette requête pour rechercher les noms des tables de cette base de données." data-comment="Cette commande est spécifique à SQLite. Pour les autres bases de données, vous devrez apprendre leur syntaxe spécifique."
+                              data-default-text="SELECT name
+FROM sqlite_master
+where type = 'table'"></sql-exercise>
 
             </div>
         </div>
@@ -158,12 +155,12 @@
         <div class="grid">
             <div class="grid-item">
                 <p>
-                    Besides knowing the table names, you need to know how each table is structured. The way this works is also dependent upon which database technology you use. Here's how you do it with SQLite.
+                    En plus de connaître les noms de table, vous devez savoir comment chaque table est structurée. La façon dont cela fonctionne dépend également de la technologie de base de données que vous utilisez. Voici comment procéder avec SQLite.
                 </p>
 
-                <sql-exercise data-question="Run this query to find the structure of the `crime_scene_report` table" data-comment="Change the value of 'name' to see the structure of the other tables you learned about with the previous query." data-default-text="SELECT sql 
-  FROM sqlite_master
- where name = 'crime_scene_report'"></sql-exercise>
+                <sql-exercise data-question="Exécutez cette requête pour trouver la structure de la table `crime_scene_report`" data-comment="Modifiez la valeur de 'name' pour voir la structure des autres tables que vous avez apprises avec la requête précédente." data-default-text="SELECT sql
+FROM sqlite_master
+where name = 'crime_scene_report'"></sql-exercise>
 
             </div>
         </div>
@@ -171,19 +168,19 @@
 
         <div class="grid">
             <div class="grid-item">
-                <h3>The rest is up to you!</h3>
+                <h3>Le reste dépend de toi !</h3>
                 <p>
-                    If you're really comfortable with SQL, you can probably get it from here.
+                    Si vous êtes vraiment à l'aise avec SQL, vous pouvez probablement l'obtenir à partir d'ici.
                 </p>
                 <p>
-                    But <a id="show-schema">click here</a> to show the schema diagram.
+                    Mais <a id="show-schema">cliquez ici</a> pour afficher le diagramme de schéma.
                     <img id="experienced-schema" src="schema.png" width='1002' height='491'>
                 </p>
                 <p>
-                    And you can always go to the <a href="walkthrough.html">walkthrough</a>.
+                    Et vous pouvez toujours accéder à la <a href="walkthrough.html">procédure pas à pas</a>.
                 </p>
 
-                <sql-exercise data-question="Use your knowledge of the database schema and SQL commands to find out who committed the murder." data-comment="When you think you know the answer, go to the next section." data-default-text="
+                <sql-exercise data-question="Utilisez vos connaissances du schéma de la base de données et des commandes SQL pour découvrir qui a commis le meurtre." data-comment="Lorsque vous pensez connaître la réponse, passez à la section suivante." data-default-text="
               
               
 
@@ -196,8 +193,8 @@
 
         <div id="check-solution" class="grid">
             <div class="grid-item">
-                <h3>Check your solution</h3>
-                <sql-exercise data-question="Did you find the killer?" data-comment="" data-default-text="INSERT INTO solution VALUES (1, 'Insert the name of the person you found here');
+                <h3>Vérifiez votre solution</h3>
+                <sql-exercise data-question="Avez-vous trouvé le tueur ?" data-comment="" data-default-text="INSERT INTO solution VALUES (1, 'Insérez ici le nom de votre suspect');
         
         SELECT value FROM solution;"></sql-exercise>
             </div>
